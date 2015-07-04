@@ -1,0 +1,59 @@
+#coding:utf8
+
+"""
+Created on 2015-07-02
+
+@author: junfu
+@description:
+         
+Copyright (c) 2014 infohold inc. All rights reserved.
+"""
+
+from flask import Flask
+
+app = Flask(__name__, template_folder='templates')
+
+
+import json
+import datetime
+from flask import Flask, make_response
+from flask_bootstrap import Bootstrap
+import leancloud
+
+
+app = Flask(__name__, static_folder='static', template_folder='templates')
+
+
+def configure_app():
+    app.config.from_pyfile('../settings.py')
+
+    app.static_folder = app.config.get('STATIC_FOLDER')
+    app.config.update({'SITE_TIME': datetime.datetime.utcnow()})
+
+    Bootstrap(app)
+
+    configure_jinja(app)
+
+    configure_leancloud(app)
+
+    return app
+
+
+
+def configure_jinja(app):
+
+    def jinja_convert_filter(value, dct):
+        if value in dct:
+            return dct[value]
+        return value
+
+    env = app.jinja_env
+    env.filters['convert'] = jinja_convert_filter
+
+
+def configure_leancloud(app):
+
+    app_id = app.config.get('APP_ID')
+    app_key = app.config.get('APP_KEY')
+    master_key = app.config.get('MASTER_KEY')
+    leancloud.init(app_id, app_key=app_key, master_key=master_key)

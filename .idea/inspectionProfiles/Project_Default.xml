@@ -1,0 +1,31 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <option name="myLocal" value="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="10">
+            <item index="0" class="java.lang.String" itemvalue="redis" />
+            <item index="1" class="java.lang.String" itemvalue="oauthlib" />
+            <item index="2" class="java.lang.String" itemvalue="dhkit" />
+            <item index="3" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="4" class="java.lang.String" itemvalue="MySQL-python" />
+            <item index="5" class="java.lang.String" itemvalue="SQLALchemy" />
+            <item index="6" class="java.lang.String" itemvalue="venusian" />
+            <item index="7" class="java.lang.String" itemvalue="tornado" />
+            <item index="8" class="java.lang.String" itemvalue="DBUtils" />
+            <item index="9" class="java.lang.String" itemvalue="Werkzeug" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="true" level="TYPO" enabled_by_default="true">
+      <option name="processCode" value="false" />
+      <option name="processLiterals" value="false" />
+      <option name="processComments" value="false" />
+    </inspection_tool>
+    <inspection_tool class="SqlDialectInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>
