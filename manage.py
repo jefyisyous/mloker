@@ -14,7 +14,7 @@ from app.app import configure_app
 def main():
     app = configure_app()
 
-    app.run(host='0.0.0.0')
+    app.run(host='127.0.0.1', port=9088)
 
 
 if __name__ == '__main__':

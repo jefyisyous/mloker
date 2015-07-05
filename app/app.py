@@ -13,16 +13,13 @@ from flask import Flask
 
 app = Flask(__name__, template_folder='templates')
 
-
 import json
 import datetime
 from flask import Flask, make_response
 from flask_bootstrap import Bootstrap
 import leancloud
 
-
 app = Flask(__name__, static_folder='static', template_folder='templates')
-
 
 def configure_app():
     app.config.from_pyfile('../settings.py')
@@ -36,9 +33,9 @@ def configure_app():
 
     configure_leancloud(app)
 
+    register_routes(app)
+
     return app
-
-
 
 def configure_jinja(app):
 
@@ -50,6 +47,11 @@ def configure_jinja(app):
     env = app.jinja_env
     env.filters['convert'] = jinja_convert_filter
 
+def register_routes(app):
+    import main
+
+    app.register_blueprint(main.main, url_prefix='/')
+    return app
 
 def configure_leancloud(app):
 

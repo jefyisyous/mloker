@@ -27,7 +27,14 @@ from app.lean.sdk import Users
 #     return render_template('user.html', user=user, posts=posts,
 #                            pagination=pagination)
 
-@main.route('/users')
+
+@main.route('/', methods=['GET'])
+def index():
+    user = Users.get()
+    #page = request.args.get('page', 1, type=int)
+    return render_template('index.html')
+
+@main.route('/users', methods=['GET'])
 def users():
     user = Users.get()
     #page = request.args.get('page', 1, type=int)
