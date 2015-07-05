@@ -14,6 +14,7 @@ from flask import render_template, redirect, url_for, abort, flash, request
 from . import main
 
 from portal.api_1_0.users import Users
+import simplejson
 
 
 # @main.route('/user/<username>')
@@ -36,6 +37,6 @@ def index():
 
 @main.route('/users', methods=['GET'])
 def users():
-    user = Users.get()["results"]
+    users = Users.get()["results"]
     #page = request.args.get('page', 1, type=int)
-    return render_template('user.html', user=user)
+    return render_template('user.html', users=simplejson.dumps(users), posts=10, pagination=10)
