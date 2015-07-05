@@ -184,7 +184,6 @@
         <option value="$PROJECT_DIR$/loker/__init__.py" />
         <option value="$PROJECT_DIR$/loker/app.py" />
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/portal/api_1_0/users.py" />
         <option value="$PROJECT_DIR$/portal/main/__init__.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/portal/templates/user.html" />
@@ -192,6 +191,7 @@
         <option value="$PROJECT_DIR$/portal/app.py" />
         <option value="$PROJECT_DIR$/tests/test.py" />
         <option value="$PROJECT_DIR$/portal/main/views.py" />
+        <option value="$PROJECT_DIR$/portal/api_1_0/users.py" />
       </list>
     </option>
   </component>
