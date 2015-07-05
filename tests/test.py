@@ -8,7 +8,7 @@ Created on 2015-07-04
          
 Copyright (c) 2014 infohold inc. All rights reserved.
 """
-from app.lean.sdk import Users
+from portal.lean.sdk import Users
 import simplejson
 
 # if __name__ == '__main__':

@@ -25,7 +25,7 @@ APP_KEY = '7iei7k6mg98ssp69056u35bbevpxzgplt0iyifsrpbrtj5xo'
 MASTER_KEY = 'j8qpixm9lyhhvuzlc2zyihs9ba17fkhdre3bvi7z6apfjo67'
 
 # 静态目录路径
-STATIC_FOLDER = os.path.join(PROJECT_PATH, 'static')
+STATIC_FOLDER = os.path.join(PROJECT_PATH, 'portal/static')
 
 # sqlalchemy数据库配置
 #SQLALCHEMY_CONFIG = "mysql+mysqldb://duckheader:duckheader@127.0.0.1:3306/duckheader?charset=utf8"

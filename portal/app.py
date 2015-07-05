@@ -9,25 +9,19 @@ Created on 2015-07-02
 Copyright (c) 2014 infohold inc. All rights reserved.
 """
 
-from flask import Flask
-
-app = Flask(__name__, template_folder='templates')
-
 import json
 import datetime
-from flask import Flask, make_response
-from flask_bootstrap import Bootstrap
+from flask import Flask
 import leancloud
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-def configure_app():
+def create_app():
     app.config.from_pyfile('../settings.py')
 
     app.static_folder = app.config.get('STATIC_FOLDER')
-    app.config.update({'SITE_TIME': datetime.datetime.utcnow()})
 
-    Bootstrap(app)
+    app.config.update({'SITE_TIME': datetime.datetime.utcnow()})
 
     configure_jinja(app)
 
@@ -49,8 +43,7 @@ def configure_jinja(app):
 
 def register_routes(app):
     import main
-
-    app.register_blueprint(main.main, url_prefix='/')
+    app.register_blueprint(main.main, url_prefix='')
     return app
 
 def configure_leancloud(app):

@@ -9,10 +9,10 @@ Created on 2015-07-02
 Copyright (c) 2014 infohold inc. All rights reserved.
 """
 
-from app.app import configure_app
+from portal.app import create_app
 
 def main():
-    app = configure_app()
+    app = create_app()
 
     app.run(host='127.0.0.1', port=9088)
 
