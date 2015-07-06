@@ -18,3 +18,7 @@ class Users(object):
     def get(cls):
         res = leancloud.client.get('/users', params={})
         return simplejson.loads(res.content)
+
+    @classmethod
+    def count(cls):
+        res = leancloud.client.get('')

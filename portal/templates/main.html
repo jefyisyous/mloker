@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% include 'public/header.html' %}
+    {% include 'public/topbar.html' %}
+<div class="ch-container">
+    <div class="row">
+        <!-- left menu starts -->
+         {% include 'public/leftmenu.html' %}
+        <!-- left menu ends -->
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">首页</a>
+        </li>
+        <li>
+            <a href="#">概况</a>
+        </li>
+    </ul>
+</div>
+
+<div class=" row">
+    {% include 'main/overview-count.html' %}
+</div>
+
+    {% include 'main/overview-chart-1.html' %}
+
+    {% include 'main/overview-chart-2.html' %}
+
+    {% include 'public/footer.html' %}
+
+</div><!--/.fluid-container-->
+
+    {% include 'public/js.html' %}
+
+</body>
+</html>

@@ -113,35 +113,7 @@
     <div class="row">
         
         <!-- left menu starts -->
-        <div class="col-sm-2 col-lg-2">
-            <div class="sidebar-nav">
-                <div class="nav-canvas">
-                    <div class="nav-sm nav nav-stacked">
-
-                    </div>
-                    <ul class="nav nav-pills nav-stacked main-menu">
-                        <li class="nav-header">Loker</li>
-                        <li><a class="ajax-link" href="index.html"><i class="glyphicon glyphicon-home"></i><span> 概 况 </span></a>
-                        </li>
-            
-                        <li><a class="ajax-link" href="user.html"><i
-                                    class="glyphicon glyphicon-user"></i><span> 用 户</span></a></li>
-                        <li><a class="ajax-link" href="activity.html"><i
-                                    class="glyphicon glyphicon-globe"></i><span> 活 动</span></a></li>
-                        <li><a class="ajax-link" href="dynamic.html"><i
-                                    class="glyphicon glyphicon-align-justify"></i><span> 动 态</span></a></li>
-                        <li><a class="ajax-link" href="gallery.html"><i class="glyphicon glyphicon-picture"></i><span> 图 库</span></a>
-                        </li>
-
-                        <li class="nav-header hidden-md">Sample Section</li>
-                        
-                        <li><a href="error.html"><i class="glyphicon glyphicon-ban-circle"></i><span> Error Page</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--/span-->
+         {% include 'leftmenu.html' %}
         <!-- left menu ends -->
 
         <noscript>
@@ -207,91 +179,7 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="box col-md-12">
-        <div class="box-inner">
-            <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-list-alt"></i> 趋势图</h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content">
-                <div id="sincos" class="center" style="height:300px"></div>
-                <p id="hoverdata">Mouse position at (<span id="x">0</span>, <span id="y">0</span>). <span
-                        id="clickdata"></span></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="box col-md-4">
-        <div class="box-inner">
-            <div class="box-header well" data-original-title="">
-                <h2><i class="glyphicon glyphicon-list-alt"></i> 地区分布 </h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content">
-                <div id="piechart" style="height:300px"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box col-md-4">
-        <div class="box-inner">
-            <div class="box-header well" data-original-title="">
-                <h2><i class="glyphicon glyphicon-list-alt"></i> 手机类型 </h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content">
-                <div id="areachart" style="height:300px"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box col-md-4">
-        <div class="box-inner">
-            <div class="box-header well" data-original-title="">
-                <h2><i class="glyphicon glyphicon-list-alt"></i> 性别 </h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content">
-                <div id="sexchart" style="height:300px"></div>
-            </div>
-        </div>
-    </div>
-</div><!--/row-->
+{% include 'main/user-overview-chart.html' %}
 
 
 

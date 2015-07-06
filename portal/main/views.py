@@ -33,7 +33,11 @@ import simplejson
 def index():
     user = Users.get()
     #page = request.args.get('page', 1, type=int)
-    return render_template('index.html')
+    return render_template('main.html')
+
+@main.route('/main', methods=['GET'])
+def front():
+    return render_template('main.html')
 
 @main.route('/users', methods=['GET'])
 def users():
