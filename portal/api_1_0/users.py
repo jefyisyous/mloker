@@ -11,6 +11,7 @@ Copyright (c) 2014 infohold inc. All rights reserved.
 
 import leancloud
 import simplejson
+import time
 
 class Users(object):
 
@@ -18,7 +19,3 @@ class Users(object):
     def get(cls):
         res = leancloud.client.get('/users', params={})
         return simplejson.loads(res.content)
-
-    @classmethod
-    def count(cls):
-        res = leancloud.client.get('')

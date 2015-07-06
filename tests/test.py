@@ -12,16 +12,27 @@ from portal.api_1_0.users import Users
 from portal.app import configure_leancloud
 import simplejson
 import leancloud
+import json
+from portal.api_1_0.stats import Stat
+
+def cut_key(params):
+    for k, v in params.iteritems():
+        if isinstance(v, dict):
+            params[k] = json.dumps(v)
+    return params
 
 
-#
-# if __name__ == '__main__':
-#     leancloud.init('mqoay5ghtispkaxpeo4eety4t07pmn3kpahecoa7frg981v6',
-#                    app_key='7iei7k6mg98ssp69056u35bbevpxzgplt0iyifsrpbrtj5xo',
-#                    master_key='j8qpixm9lyhhvuzlc2zyihs9ba17fkhdre3bvi7z6apfjo67')
-#     user = Users.get()
-#     print type(user)
-#     print user
-#     print user.get("results")
-#     print simplejson.dumps(user.get("results"))
+if __name__ == '__main__':
+    leancloud.init('mqoay5ghtispkaxpeo4eety4t07pmn3kpahecoa7frg981v6',
+                   app_key='7iei7k6mg98ssp69056u35bbevpxzgplt0iyifsrpbrtj5xo',
+                   master_key='j8qpixm9lyhhvuzlc2zyihs9ba17fkhdre3bvi7z6apfjo67')
+    # user = Users.get()
+    # print type(user)
+    # print user
+    # print user.get("results")
+    # print simplejson.dumps(user.get("results"))
+    # res = Users.statistics()
+    # print res
+
+
 

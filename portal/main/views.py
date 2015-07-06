@@ -14,6 +14,7 @@ from flask import render_template, redirect, url_for, abort, flash, request
 from . import main
 
 from portal.api_1_0.users import Users
+from portal.api_1_0.stats import Stat
 import simplejson
 
 
@@ -37,7 +38,9 @@ def index():
 
 @main.route('/main', methods=['GET'])
 def front():
-    return render_template('main.html')
+    accumulate_user = Stat.current("accumulate_user")
+    return render_template('main.html', accumulate_user=accumulate_user )
+
 
 @main.route('/users', methods=['GET'])
 def users():

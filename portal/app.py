@@ -13,8 +13,12 @@ import json
 import datetime
 from flask import Flask
 import leancloud
+from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.script import Manager
+from flask.ext.migrate import Migrate, MigrateCommand
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
+
 
 def create_app():
     app.config.from_pyfile('../settings.py')
