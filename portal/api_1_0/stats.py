@@ -37,5 +37,3 @@ class Stat(Base):
                                            "X-AVOSCloud-Application-Id:": "mqoay5ghtispkaxpeo4eety4t07pmn3kpahecoa7frg981v6"}
                                    )
         return simplejson.loads(res.content)
-
-
