@@ -13,6 +13,7 @@ import json
 import datetime
 from flask import Flask
 import leancloud
+from db.database import init_db
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
@@ -32,6 +33,8 @@ def create_app():
     configure_leancloud(app)
 
     register_routes(app)
+
+    init_db()
 
     return app
 

@@ -1,0 +1,16 @@
+accumulate_user: 累计用户数
+new_user: 新增用户数
+active_user	活跃用户数
+session	启动次数
+new_user_hour	新增用户数（按小时查看）
+active_user_hour	活跃用户数（按小时查看）
+session_hour	启动次数（按小时查看）
+wau	周活跃用户数
+mau	月活跃用户数
+push_session	聊天用户数
+push_direct	聊天消息数
+active_user_locations	活跃用户所在地
+new_user_locations	新用户所在地
+device_os	设备系统版本
+device_model	设备型号
+

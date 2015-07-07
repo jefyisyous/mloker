@@ -8,22 +8,22 @@ Created on 2015-07-06
          
 Copyright (c) 2014 infohold inc. All rights reserved.
 """
-from utils import Base
 import time, leancloud, simplejson
 
 
-class Stat(Base):
+class Stat(object):
 
     TODAY = time.strftime("%Y%m%d")
 
     @classmethod
     def current(cls, metrics):
         res = cls._statistics(cls.TODAY, cls.TODAY, metrics)
-        dct = dict()
-        if res.get("metrics") == metrics:
-            dct = res.get("data")
-
-        return dct.get(time.strftime("%Y-%m-%d"))
+        # dct = dict()
+        # if res.get("metrics") == metrics:
+        #     dct = res.get("data")
+        #
+        # return dct.get(time.strftime("%Y-%m-%d"))
+        return res
 
     def get(self):
         pass

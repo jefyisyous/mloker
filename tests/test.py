@@ -15,12 +15,13 @@ import leancloud
 import json
 from portal.api_1_0.stats import Stat
 
+from portal.redis.prepare import PrepareStat
+
 def cut_key(params):
     for k, v in params.iteritems():
         if isinstance(v, dict):
             params[k] = json.dumps(v)
     return params
-
 
 if __name__ == '__main__':
     leancloud.init('mqoay5ghtispkaxpeo4eety4t07pmn3kpahecoa7frg981v6',
@@ -33,6 +34,16 @@ if __name__ == '__main__':
     # print simplejson.dumps(user.get("results"))
     # res = Users.statistics()
     # print res
+    #print PrepareStat.set_metrics()
+    #dct = {'metrics': 'accumulate_user', 'data': {'2015-07-07': 216}}
+    #print cut_key(dct)
+    #print cut_key(dct)
+
+    res = PrepareStat().set_metrics()
+
+
+
+
 
 
 
